@@ -91,3 +91,22 @@ docker run -p 5000:5000 frontend12
 docker build -t backend12 .
 docker run -p 8000:8000 backend12
 ```
+
+## 1.13
+```
+docker image build -t springdocker .
+docker run -p 8080:8080 springdocker
+```
+
+## 1.14
+```
+docker image build -t dockclicker .
+docker run -p 3000:3000 dockclicker
+```
+
+## 1.15
+https://hub.docker.com/r/kontittaja/tsoha-places
+```
+docker run -p 5000:5000 kontittaja/tsoha-places
+```
+open browser: localhost:5000
