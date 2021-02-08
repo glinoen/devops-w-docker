@@ -46,3 +46,48 @@ Thu, 28 Jan 2021 09:13:45 GMT
 ```
 docker container run -it  ubuntu sh -c 'apt-get update; apt-get install curl; echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
 ```
+
+## 1.8
+```
+touch dogs.txt
+docker container run -v "$(pwd)/dogs.txt:/usr/app/logs.txt" devopsdockeruh/first_volume_exercise
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+Wrote to file /usr/app/logs.txt
+ctrl + c
+cat dogs.txt
+Wed, 03 Feb 2021 12:50:20 GMT
+Wed, 03 Feb 2021 12:50:23 GMT
+Wed, 03 Feb 2021 12:50:26 GMT
+Wed, 03 Feb 2021 12:50:29 GMT
+Secret message is:
+"Volume bind mount is easy"
+```
+
+## 1.9
+```
+docker run -p 3567:80 devopsdockeruh/ports_exercise
+
+"Ports configured correctly!!"
+```
+
+## 1.10
+```
+docker build -t frontendexampledocker .
+docker run -p 5000:5000 frontendexampledocker
+```
+
+## 1.11
+```
+docker build -t backenddocker .
+docker container run -v "$(pwd)/logs.txt:/usr/src/app/logs.txt" -p 8000:8000 backenddocker
+```
+
+## 1.12
+```
+docker build -t frontend12 .
+docker run -p 5000:5000 frontend12
+
+docker build -t backend12 .
+docker run -p 8000:8000 backend12
+```
