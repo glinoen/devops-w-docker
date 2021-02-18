@@ -47,6 +47,18 @@ Thu, 28 Jan 2021 09:13:45 GMT
 docker container run -it  ubuntu sh -c 'apt-get update; apt-get install curl; echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website;'
 ```
 
+## 1.6
+```
+docker build -t docker-clock .
+
+docker container run docker-clock
+```
+
+## 1.7
+```
+docker container run -it curler
+```
+
 ## 1.8
 ```
 touch dogs.txt
