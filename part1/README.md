@@ -110,3 +110,14 @@ https://hub.docker.com/r/kontittaja/tsoha-places
 docker run -p 5000:5000 kontittaja/tsoha-places
 ```
 open browser: localhost:5000
+
+## 1.16
+```
+docker pull devopsdockeruh/heroku-example
+docker tag devopsdockeruh/heroku-example registry.heroku.com/docker-exercise1-16/web
+heroku login
+heroku container:login
+docker image push registry.heroku.com/docker-exercise1-16/web
+heroku container:release -a docker-exercise1-16 web
+```
+https://docker-exercise1-16.herokuapp.com/
